@@ -1,0 +1,325 @@
+ul {
+    list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(144, 144, 206);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font: normal 20px Arial;
+    -webkit-font-smoothing: antialiased;
+}
+
+.tela {
+    background-color: white;
+    width: 53vh;
+    height: 96vh;
+    margin: 8px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: relative;
+}
+
+.bar {
+    background-color: rgb(231, 255, 146);
+    padding: 8px 16px;
+    width: 100%;
+    font-size: 12px;
+    color:rgb(58, 58, 92);
+}
+
+.message {
+    background-color: rgb(177 193 117);
+    justify-content: center;
+    color: white;
+    top: -30px;
+    overflow: hidden;
+    position: absolute;
+    transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    box-sizing: border-box; 
+}
+
+.container {
+    transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    z-index: 9;
+}
+
+.txt1 {
+    font-weight: 600;
+}
+
+/* esconde o checkbox */
+#toggle-tip, #toggle-helper {
+    position:absolute;
+    appearance:none;
+    cursor:pointer;
+    left:-100%;
+    top:-100%; 
+} 
+
+/* toggle da tipbar */
+
+#toggle-tip + label {
+    color: rgb(58, 58, 92);
+    font-size: 12px;
+    text-decoration: underline;
+    cursor:pointer;
+    border: none;
+    -webkit-font-smoothing: antialiased;
+    transition: top 500ms ease;
+    position: absolute;
+    z-index: 10;
+    padding: 8px 16px;
+    width: 49vh;
+    text-align: right;
+}
+
+#toggle-tip:checked ~ .message {
+    top: 30px;
+}
+
+#toggle-tip:checked ~ #guia {
+    margin: 62px auto;
+}
+
+#toggle-tip + label:after {
+    content:"Expandir info"; 
+}
+
+#toggle-tip:checked + label:after {
+    content:"Esconder";
+}
+
+/* conteudo do helper */
+
+.menu {
+    width: 29px;
+    height: 32px;
+    background-size: cover;
+    position: absolute;
+}
+
+.menu:hover {
+    filter: brightness(0.7);
+}
+
+.open {
+    background-image: url(../dia%203/img/burger.svg);
+    transform: scale(1);
+    transition: transform .4s ease;
+}
+
+.close {
+    background-image: url(../dia%203/img/close.svg);
+    transform: scale(0);
+    transition: transform .4s ease;
+}
+
+.helper-content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 3vh 3vh 0;
+    padding: 0 8px 40px 0;
+    
+}
+
+.helper-content > ul {
+    padding: 10px;
+    
+    font: normal 12px Arial;
+    
+    transform: scale(0);
+    transform-origin: bottom right;
+    
+    transition: all .4s ease-in-out 0.1s;
+    opacity: 0;
+    
+    margin-bottom: -45px;
+    margin-right: 0px;
+
+    transform-origin: bottom right;
+
+    
+    
+}
+
+li a {
+    padding: 16px 8px;
+    background-color: rgb(177 193 117);
+    margin: 2px -7px 0 0;
+    display: flex;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.fab {
+    margin-right: 8px;
+    border-right: 1px solid #d4e2a1;
+    width: 24px;
+    justify-content: center;
+    padding-left: 4px;
+}
+
+.fa-facebook-f {
+    margin-left: 2px;
+    width: 22px;
+}
+
+/* toggle do helper */
+
+#toggle-helper + label {
+    background-color: rgb(231, 255, 146);
+    border-radius: 100%;
+    color: rgb(58, 58, 92);
+    font-size: 12px;
+
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 3vh 3vh 0;
+    z-index: 100;
+
+    cursor:pointer;
+    border: none;
+}
+
+#toggle-helper:hover + label {
+    background-color: rgb(216 239 137);
+}
+
+#toggle-helper:checked ~ .helper-content > ul{
+    transform: scale(1);  
+    opacity: 1;
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+
+#toggle-helper:checked ~ .hlpr i.open { 
+    transform: scale(0);
+}
+
+#toggle-helper:checked ~ .hlpr i.close { 
+    transform: scale(1);
+}
+
+/* info guia */
+
+#guia {
+    color: black;
+
+    width: 88%;
+    margin: 32px auto;
+    position: relative;
+    float: left;
+
+    font: normal 14px Arial;
+
+    transition: margin .3s ease;
+}
+
+.title {
+    position: absolute;
+    box-sizing: border-box;
+    width: 51%;
+    padding: 8px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.nut.title {
+    right: 0;
+}
+
+.guia-content {
+    margin-top: 48px;
+    float: left;
+}
+
+.nut.guia-content {
+    transform: translateX(185px);
+    opacity: 0;
+    transition: all .2s ease;
+}
+
+.ing.guia-content {
+    transform: translateX(-125px);
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+#guia input[type="radio"]:checked ~ .title {
+   font-weight: 600;
+   border-bottom: 2px solid black;
+   padding-bottom: 7px;
+}
+
+#guia input[type="radio"]:checked ~ .nut.guia-content {
+  transform:translateX(-125px);
+  -webkit-transform:translateX(-125px);
+  opacity:1;
+  z-index:1;
+}
+
+#guia input[type="radio"]:checked ~ .ing.guia-content {
+    transform:translateX(0px);
+  -webkit-transform:translateX(0px);
+  opacity:1;
+  z-index:1;  
+    
+}
+
+
+
+
+/* responsividade pro desk */
+
+@media (min-width: 1024px) {
+    #toggle-helper + label, .helper-content {
+        margin: 0 33vw 3vh 0;
+    }
+}
+
+@media (min-width: 1366px) {
+    #toggle-helper + label, .helper-content {
+        margin: 0 35vw 3vh 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    #toggle-helper + label, .helper-content {
+        margin: 0 37vw 3vh 0;
+    }
+}
+
+@media (min-width: 1920px) {
+    #toggle-helper + label, .helper-content {
+        margin: 0 38vw 3vh 0;
+    }
+}
+
+
+
