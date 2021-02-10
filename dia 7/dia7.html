@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f57582f400.js" crossorigin="anonymous"></script>
+    <title>Dia 3 do Desafio de CSS</title>
+</head>
+<body>
+
+    <section id="main">
+        <section class="tela">  
+            
+            <input type="checkbox" name="toggle" id="toggle-tip" />
+            <label for="toggle-tip"></label>
+
+            <div class="bar container">
+                <span class="txt1">Frete grátis</span> 
+            </div>
+
+            <div class="bar message">
+                <span>Válido para o Sudeste em compra acima de R$100.</span>
+            </div>
+
+            <div id="helper">
+                <input type="checkbox" id="toggle-helper" hidden />
+                <label for="toggle-helper" class="hlpr">
+                    <i class="menu open">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0 {fill:#606282;}
+                            </style>
+                            <path class="st0" d="M23.4,45h53.1c0.5,0,1-0.3,1.1-0.8c0.7-2.1,1-4.3,1-6.5c0-2-0.7-4-1.9-5.7c-3.5-4.7-12-6.9-26.7-6.9
+                                c-7.5,0-13.3,0.6-17.7,1.8c-4.2,1.1-7.1,2.8-8.9,5.2c-2.9,3.8-2,8.7-1.1,12.1C22.5,44.6,22.9,45,23.4,45z"/>
+                            <path class="st0" d="M76.6,61H23.4c-0.6,0-1.1,0.5-1.1,1.1l0,0v4.3c0,4.6,3.7,8.3,8.3,8.3h38.7c4.6,0,8.3-3.7,8.3-8.3v-4.3
+                                C77.7,61.6,77.2,61.1,76.6,61C76.6,61.1,76.6,61,76.6,61z"/>
+                            <path class="st0" d="M78.1,47.5H21.9c-3,0-5.4,2.4-5.4,5.4v0.2c0,3,2.4,5.4,5.4,5.4h56.2c3,0,5.4-2.4,5.4-5.4v-0.2
+                                C83.5,49.9,81.1,47.5,78.1,47.5z"/>
+                        </svg>
+
+                    </i>
+                    <i class="menu close">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:#606282;}
+                            </style>
+                            <path class="st0" d="M66,29.2L26.2,69c-2.1,2.1-2.1,5.5,0,7.6l0.2,0.2c2.1,2.1,5.5,2.1,7.6,0L73.8,37c2.1-2.1,2.1-5.5,0-7.6
+                                l-0.2-0.2C71.5,27.2,68.1,27.2,66,29.2z"/>
+                            <path class="st0" d="M73.8,69L34,29.2c-2.1-2.1-5.5-2.1-7.6,0l-0.2,0.2c-2.1,2.1-2.1,5.5,0,7.6L66,76.8c2.1,2.1,5.5,2.1,7.6,0
+                                l0.2-0.2C75.9,74.5,75.9,71.1,73.8,69C73.8,69,73.8,69,73.8,69z"/>
+                        </svg>
+                    </i>
+                </label>
+                <div class="helper-content">
+                    <ul>
+                        <li><a target="_blank" href="https://twitter.com/"><i class="i-helper fab fa-twitter"></i><span>Pedinho vai ser papai.</span></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/"><i class="i-helper fab fa-instagram"></i><span>É mesmo, é?</span></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/"><i class="i-helper fab fa-facebook-f"></i><span>Quem vai ser papai?</span></a></li>
+                        <li><a target="_blank" href="https://github.com/"><i class="i-helper fab fa-github"></i><span>Menina mulher da pele preta.</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="payment">
+                <h1>Pagamento</h1>
+                <div id ="card-type">
+                    <label for="tcard-tab-1">
+                        <input type="radio" name="tcard" id="tcard-tab-1" value="radio-tcard-cred" checked hidden>
+                        <div class="cred title">Crédito</div>
+                        
+                            <div class="cred flipcard">
+                                <div class="tcard-content front">
+                                    <ul>
+                                        <li class="card-info number">1234 5678 4321 8765</li>
+                                        <li class="card-info valid">Val: 06/06 </li>
+                                        <li class="card-info name">Fernanda Vasconcelos</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tcard-content back">
+                                    <ul>
+                                        <li class="card-info number">1234 5678 4321 8765</li>
+                                        <li class="card-info cvv">103 </li>
+                                        <li class="card-info"><br></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+
+                            
+                        
+                             
+                    </label>
+            
+                    <label for="tcard-tab-2">
+                        <input type="radio" name="tcard" id="tcard-tab-2" value="radio-tcard-deb" hidden>
+                        <div class="deb title">Débito</div>
+                        <div class="deb flipcard tcard-content">
+                            <ul>
+                                <li class="card-info number">1234 5678 4321 8765</li>
+                                <li class="card-info valid">Val: </li>
+                                <li class="card-info name">Fernanda Vasconcelos</li>
+                            </ul>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <hr></hr>
+
+            <div class="review">
+                <h1>Revisão do pedido</h1>
+                <div class="reviewCard">
+                    <div class="pdPhoto">
+                        <img  src="https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/BR/sanduiches-de-carne/bigmac_v2.png" alt="">
+                    </div>    
+                    
+                    
+
+                    <div class="pdInfo">  
+                        <h4>Big Mac</h4>
+                        <p>Dois hamburgueres, alface, queijo, molho especial, cebola, picles, pão com gergelim.</p>
+                        <p><i class="fas fa-user-friends"></i>  Serve uma pessoa.</p>
+                        <a class="pdDetails" href="#rvModal" class="reviewModal">Ver mais detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rvModal" class="reviewModal">
+                <div class="rMdContent">
+                    <a href="#" class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    
+                    <div class="pdInfo">  
+                        <h3>Detalhe do Produto</h4>
+                    </div>
+                    
+                    <div class="pdPhoto">
+                        <img  src="https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/BR/sanduiches-de-carne/bigmac_v2.png" alt="">
+                    </div>    
+
+                    <div class="pdInfo">  
+                        <h4>Big Mac</h4>
+                        <p>Dois hamburgueres, alface, queijo, molho especial, cebola, picles, pão com gergelim.</p>
+                        <p><i class="fas fa-user-friends"></i>  Serve uma pessoa.</p>
+                        <h5>Valores Nutricionais</h5>
+                        <ul>
+                            <li>Calorias: XX</li>
+                            <li>Carboidrados: XX</li>
+                            <li>Sódio: XX </li>
+                            <li>Proteínas: XX </li>
+                            <li>Lipídios: XX</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+
+    </section>
+    
+    
+
+    <section id="footer">
+        <div class="grid1 fContent">
+            <h4 class="fTitle">Sobre o Burg Pedrinho</h4>
+            <p class="fTxt">Começamos em fevereiro de 2018 com um burg bolado, cheio de alho. Tu curte alho? Cara, tem que gostar de alho.</p>
+            <ul class="social-icons">
+                <li><a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a target="_blank" href="https://github.com/"><i class="fab fa-github"></i></a></li>
+                
+            </ul>
+        </div>
+        <div class="grid2 fContent ">
+            <h4 class="fTitle">Site map</h4>
+            <div class="site-map fTxt">
+                <ul class="">
+                    <li><a href="">Página 1</a></li>
+                    <li><a href="">Página 1</a></li>
+                    <li><a href="">Página 1</a></li>
+                </ul>
+                <ul class="">
+                    <li><a href="">Página 1</a></li>
+                    <li><a href="">Página 1</a></li>
+                    <li><a href="">Página 1</a></li>
+                </ul>
+                <ul class="">
+                    <li><a href="">Página 1</a></li>
+                    <li><a href="">Página 1</a></li>
+                    <li><a href="">Página 1</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid1 fContent">
+            <h4 class="fTitle">Contato</h4>
+
+            <ul class="fTxt">
+                <li><a href="">21 9 69805320</a></li>
+                <li><a href="">fvasconcelosdg@gmail.com</a></li>
+                <li><a href="">@fe.hvasconcelos</a></li>
+            </ul>
+            
+        </div>
+        
+    </section>
+
+</body>
+</html>
